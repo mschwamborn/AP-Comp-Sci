@@ -32,6 +32,7 @@ public class Class1 {
 	    	four = ((one-three)/100);
 	    	System.out.print("Here are the digits:"+"\n"+four+"\n"+three+"\n"+two);*/
 	    	lab6();
+	    	code();
 	    	
 	    	
 
@@ -39,7 +40,7 @@ public class Class1 {
 	    	
 	    }
 
-	    	public static void code(String[] args) {
+	    	public static void code() {
 	    			
 	    		Scanner sc = new Scanner(System.in);
 
