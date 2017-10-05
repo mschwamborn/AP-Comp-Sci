@@ -8,6 +8,7 @@ public class Test {
 
 		// TODO Auto-generated method stub
 		ed();
+		movie();
 			
 
 		
@@ -277,4 +278,4 @@ public class Test {
 
 	
 	
-
+
