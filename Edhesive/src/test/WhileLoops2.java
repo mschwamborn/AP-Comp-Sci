@@ -4,7 +4,7 @@ public class WhileLoops2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-LoopRev();
+test();
 	}
 	public static void LoopRev() {
 		int num = 9005;
@@ -23,5 +23,16 @@ LoopRev();
 		
 		System.out.print(original + " reversed is "+ output);
 	}
+	public static void test() {
+		boolean x = false;
+		boolean y = false;
 
+		if ((x && y) || !(x || y)){
+		    System.out.print ("one");
+	
+		
+	}
+else
+		    System.out.print("five");
+}
 }
