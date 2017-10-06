@@ -27,7 +27,25 @@ test();
 	}
 	System.out.print(original + " reversed is "+ output);
 	}
-		
+		public static void LoopPerfect() {
+			 int num = 45, count = 1,Idivisors=0,devide=0;
+			 String Sdivisors = "";
+			 
+			 while(count<num) {
+				 if(num%count==0) {
+					 Sdivisors += count+ " " ;
+					 devide = (devide+count);
+					Idivisors++;
+				 }
+				 count++;
+		}
+			 if(devide==num) {
+			 System.out.print(num + " is perfect.");
+			 }
+			 else {
+				 System.out.print(num+" is not perfect.");
+		}
+		}
 	}
 	
 
