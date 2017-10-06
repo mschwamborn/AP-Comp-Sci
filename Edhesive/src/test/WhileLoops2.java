@@ -1,5 +1,5 @@
 package test;
-
+import java.util.*;
 public class WhileLoops2 {
 
 	public static void main(String[] args) {
@@ -7,8 +7,8 @@ public class WhileLoops2 {
 test();
 	}
 	public static void LoopRev() {
-		int num = 9005;
-		int rev = 0;
+		int num = 10010;
+		int space=0;
 		String snum = Integer.toString(num);
 		int count = 0;
 		String output = "" ;
@@ -19,20 +19,15 @@ test();
 			num  = num/10;
 			count++;
 		}
-		if((output.charAt(0)==48))
+		while((output.charAt(0)=='0')) {
+			if((output.charAt(0)=='0')) {
+			output = output.substring(1);
 		
-		System.out.print(original + " reversed is "+ output);
+		}
 	}
-	public static void test() {
-		boolean x = false;
-		boolean y = false;
-
-		if ((x && y) || !(x || y)){
-		    System.out.print ("one");
+	System.out.print(original + " reversed is "+ output);
+	}
+		
+	}
 	
-		
-	}
-else
-		    System.out.print("five");
-}
-}
+

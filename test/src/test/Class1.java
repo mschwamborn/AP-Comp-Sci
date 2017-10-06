@@ -31,8 +31,8 @@ public class Class1 {
 	    	three =((one-two)/10)%10;
 	    	four = ((one-three)/100);
 	    	System.out.print("Here are the digits:"+"\n"+four+"\n"+three+"\n"+two);*/
-	    	lab6();
-	    	code();
+	    	test();
+	    	
 	    
 	    	
 	    	
@@ -126,7 +126,7 @@ public class Class1 {
 	    		System.out.println("Minute: "+min);
 	    		System.out.println("Second: "+sec);
 	    	}
-	    	public static void test(){
+/*    	public static void test(){
 	    		Scanner sc = new Scanner (System.in);
 	    		int year1,month1,day1,hour1,min1, year,month,day,hour,min,sec;
 	    		System.out.println("Seconds Since Unix Epoch: ");
@@ -154,7 +154,7 @@ public class Class1 {
 	    		System.out.println("Hour: " + hour);
 	    		System.out.println("Min: " + min);
 	    		System.out.println("Sec: " + sec);
-	    	}
+	    	}*/
 	    	public static void lab5() {
 	    		Scanner sc = new Scanner (System.in);
 	    		
@@ -180,6 +180,29 @@ public class Class1 {
 	    		hyphen = ((word.substring(0,word.indexOf(" ")))+"-"+(word.substring(word.indexOf(" ")+1,word.length())));
 	    		System.out.print(hyphen);
 	    	}
-}
+	    	public static void test() {
+	    		int num = 10010;
+	    		int space=0;
+	    		String snum = Integer.toString(num);
+	    		int count = 0;
+	    		String output = "" ;
+	    		int original = num;
+	    		
+	    		while(count< (snum.length())) {
+	    			output += (num%10)+"";
+	    			num  = num/10;
+	    			count++;
+	    		}
+	    		while((output.charAt(0)=='0')) {
+	    			if((output.charAt(0)=='0')) {
+	    			output = output.substring(1);
+	    		
+	    		}
+	    	}
+	    	System.out.print(original + " reversed is "+ output);
+	    	}
+	    		
+	    	}
+
 
     
