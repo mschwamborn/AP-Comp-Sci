@@ -181,25 +181,32 @@ public class Class1 {
 	    		System.out.print(hyphen);
 	    	}
 	    	public static void test() {
-	    		int num = 45, count = 1,Idivisors=0,devide=0;
-				 String Sdivisors = "";
-				 
-				 while(count<num) {
-					 if(num%count==0) {
-						 Sdivisors += count+ " " ;
-						 devide = (devide+count);
-						Idivisors++;
-					 }
-					 count++;
-			}
-				 if(devide==num) {
-				 System.out.print(num + " is perfect.");
-				 }
-				 else {
-					 System.out.print(num+" is not perfect.");
-			}
-			}
+		Scanner sc = new Scanner(System.in);
+//	            int input1,input2,count=0,mod;
+//	            String even = "";
+//	            System.out.println("Enter two numbers:");
+//	            input1 = sc.nextInt();
+//	            input2=sc.nextInt();
+//	            count = input1;
+//	            while(count<=input2){
+//	               mod = count%2;
+//	                if(mod==0){
+//	                    even += Integer.toString(count)+" ";
+//	                }
+//	                count++;
+//	            }
+//	            
+//	            System.out.println(even);
+	    		int num = sc.nextInt();
+	    		 int sum = 0;
+
+	    		while ( num > 0) {
+	    		    sum += num % 10;
+	    		    num /= 10;
+	    		}
+	    		System.out.print(sum);
 	    		
+	    	}
 	    	}
 
 
