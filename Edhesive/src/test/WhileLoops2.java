@@ -4,7 +4,7 @@ public class WhileLoops2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-test();
+		LoopPerfect();
 	}
 	public static void LoopRev() {
 		int num = 10010;
@@ -28,7 +28,7 @@ test();
 	System.out.print(original + " reversed is "+ output);
 	}
 		public static void LoopPerfect() {
-			 int num = 45, count = 1,Idivisors=0,devide=0;
+			 int num = 496, count = 1,Idivisors=0,devide=0;
 			 String Sdivisors = "";
 			 
 			 while(count<num) {
