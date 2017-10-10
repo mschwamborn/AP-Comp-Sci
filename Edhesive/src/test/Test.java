@@ -278,20 +278,23 @@ public class Test {
 			public static void latlong() {
 				Scanner sc= new Scanner (System.in);
 				int answer=0;
-				double longitude1, latitude1, longitude2, latitude2;
-				while(answer==1)
+				double longitude1, latitude1, longitude2=0, latitude2=0;
+				while(answer==1) {
 				System.out.println("Please enter the latitude:");
 				latitude1 = sc.nextDouble();
 				System.out.println("Please enter the longitude:");
 				longitude1 = sc.nextDouble();
 				System.out.println("Would you like to enter another location?");
 				answer = sc.nextInt();
-				if(answer ==1) {
-					
+				if(longitude1<longitude2) {
+					longitude1 = longitude2;
 				}
-				else if(answer == 0) {
-					
+				if(latitude1<latitude2) {
+					latitude1=latitude2;
 				}
+				
+				}
+				System.out.println("Farthest North: "+)
 			}
 }
 
