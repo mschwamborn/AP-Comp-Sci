@@ -287,14 +287,15 @@ public class Test {
 				System.out.println("Would you like to enter another location?");
 				answer = sc.nextInt();
 				if(longitude1<longitude2) {
-					longitude1 = longitude2;
+					longitude2 = longitude1;
 				}
 				if(latitude1<latitude2) {
-					latitude1=latitude2;
+					latitude2=latitude1;
 				}
 				
 				}
-				System.out.println("Farthest North: "+)
+				System.out.println("Farthest North: "+longitude2)
+				System.out.println("Farthest East: "+latitude2)
 			}
 }
 

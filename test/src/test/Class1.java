@@ -31,7 +31,7 @@ public class Class1 {
 	    	three =((one-two)/10)%10;
 	    	four = ((one-three)/100);
 	    	System.out.print("Here are the digits:"+"\n"+four+"\n"+three+"\n"+two);*/
-	    	test();
+	    	latlong();
 	    	
 	    
 	    	
@@ -207,7 +207,42 @@ public class Class1 {
 	    		System.out.print(sum);
 	    		
 	    	}
+	    	public static void latlong() {
+				Scanner sc= new Scanner (System.in);
+				int answer=1;
+				double longitude1, latitude1, longitude2=0, latitude2=0, leastLat = 90, leastLong = 180;
+				while(answer==1) {
+				System.out.println("Please enter the latitude:");
+				latitude1 = sc.nextDouble();
+				System.out.println("Please enter the longitude:");
+				longitude1 = sc.nextDouble();
+				System.out.println("Would you like to enter another location?");
+				answer = sc.nextInt();
+				if((longitude1<=180&&longitude1>=-180)&&(latitude1<=90&&latitude1>=-90)) {
+				if(longitude1>longitude2) {
+					longitude2 = longitude1;
+				}
+				if (longitude1<leastLong) {
+					leastLong = longitude1;
+				}
+				if(latitude1>latitude2) {
+					latitude2=latitude1;
+				}
+				if(latitude1<leastLat) {
+					leastLat=latitude1;
+				}
+				if(answer == 0) {
+					answer = 0;
+				}
+				}
+				System.out.println("Farthest North: "+longitude2);
+				System.out.println("Farthest South: "+leastLong);
+				System.out.println("Farthest East: "+latitude2);
+				System.out.println("Farthest West: "+leastLat);
+			}
 	    	}
+}
+	    	
 
 
     
