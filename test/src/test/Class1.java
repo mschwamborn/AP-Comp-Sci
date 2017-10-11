@@ -235,11 +235,12 @@ public class Class1 {
 					answer = 0;
 				}
 				}
+				}
 				System.out.println("Farthest North: "+longitude2);
 				System.out.println("Farthest South: "+leastLong);
 				System.out.println("Farthest East: "+latitude2);
 				System.out.println("Farthest West: "+leastLat);
-			}
+			
 	    	}
 }
 	    	

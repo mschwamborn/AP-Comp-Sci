@@ -7,8 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 
 		// TODO Auto-generated method stub
-		ed();
-		movie();
+		latlong();
 			
 
 		
@@ -129,14 +128,6 @@ public class Test {
 		
 				        
 	
-		    
-		    
-		    
-		
-		       
-		    
-		
-	
 	public static void lab1() {
 		int one,two,largest,smallest;
 		 
@@ -245,7 +236,6 @@ public class Test {
 		}
 
 		}
-
 		public static void lab7() {
 
 		Scanner sc = new Scanner(System.in);
@@ -294,8 +284,8 @@ public class Test {
 				}
 				
 				}
-				System.out.println("Farthest North: "+longitude2)
-				System.out.println("Farthest East: "+latitude2)
+				System.out.println("Farthest North: "+longitude2);
+				System.out.println("Farthest East: "+latitude2);
 			}
 }
 
