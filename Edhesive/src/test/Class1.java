@@ -195,7 +195,7 @@ public class Class1 {
 //	                }
 //	                count++;
 //	            }
-//	            
+//	            HEy
 //	            System.out.println(even);
 	    		int num = sc.nextInt();
 	    		 int sum = 0;
