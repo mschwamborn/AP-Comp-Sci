@@ -7,7 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 
 		// TODO Auto-generated method stub
-		latlong();
+		test();
 		//HEY
 			
 
@@ -62,7 +62,7 @@ public class Test {
 		System.out.println("Overall movie rating: "+overallAv);
 	}
 
-	public static void test() {
+	public static void tes2t() {
 		Scanner sc = new Scanner(System.in);
 		
 		/*double num1 = sc.nextDouble();
@@ -287,6 +287,12 @@ public class Test {
 				}
 				System.out.println("Farthest North: "+longitude2);
 				System.out.println("Farthest East: "+latitude2);
+			}
+			public static void test() {
+				int num1 = 5;
+				int num2  =6;
+				int diff = Math.abs(num2 - num1);				System.out.println(diff);
+				
 			}
 }
 
