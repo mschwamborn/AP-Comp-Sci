@@ -266,28 +266,7 @@ public class Test {
 			System.out.println(city+"\n"+state+"\n"+zip);
 			}
 			
-			public static void latlong() {
-				Scanner sc= new Scanner (System.in);
-				int answer=0;
-				double longitude1, latitude1, longitude2=0, latitude2=0;
-				while(answer==1) {
-				System.out.println("Please enter the latitude:");
-				latitude1 = sc.nextDouble();
-				System.out.println("Please enter the longitude:");
-				longitude1 = sc.nextDouble();
-				System.out.println("Would you like to enter another location?");
-				answer = sc.nextInt();
-				if(longitude1<longitude2) {
-					longitude2 = longitude1;
-				}
-				if(latitude1<latitude2) {
-					latitude2=latitude1;
-				}
-				
-				}
-				System.out.println("Farthest North: "+longitude2);
-				System.out.println("Farthest East: "+latitude2);
-			}
+			
 			public static void test() {
 				int num1 = 5;
 				int num2  =6;
