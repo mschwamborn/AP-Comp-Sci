@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
+		//test
 		String name;
 		int one, two, three;
 		Scanner sc = new Scanner (System.in);
