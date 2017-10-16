@@ -7,7 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 
 		// TODO Auto-generated method stub
-		test();
+		//test();
 		//HHIII
 			
 
@@ -267,29 +267,36 @@ public class Test {
 			}
 			
 			
-			public static void test() {
+			public static void TempAverageArray() {
 				Scanner sc = new Scanner(System.in);
-				int length,num;
-				System.out.println("How many integers would you like to enter?");
+				int length,num,sum=0;
+				System.out.println("How many tempratures would you like to enter?");
 				 length = sc.nextInt();
 				
 				int[] array = new int[length];
 				for(int spot=0;spot<length;spot++) {
-					System.out.println("Please Enter your number:");
+					System.out.println("Please Enter the temp:");
 					num=sc.nextInt();
 					array[spot]=num;
+					sum+=num;
 				} 
 				System.out.println("\nYour numbers are: ");
+				
 				for(int spot=0;spot<length;spot++) {
 					
 					System.out.print(array[spot]+" ");
 					
 					
 				}
-				
+				System.out.println("\nThe average is: \n" + ((double)sum/array.length));
+		
+			}
+			public static void groceriesList() {
+				Scanner sc=new Scanner(System.in);
+				int length;
+				String[] list;
 			}
 }
-
 	
 	
 
