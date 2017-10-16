@@ -45,21 +45,32 @@ public class Main {
 //					"Better luck next time!");
 //		}
 		 String word;
-	        int counter= 0;
+//	        int counter= 0;
 	        Scanner sc = new Scanner(System.in);
-	        System.out.println("Enter a string:");
-	        word = sc.nextLine();
-	        while(counter<word.length()){
-	        	
-	        	for(int c=0;c<counter;c++){
-	        	
-	        	
-	            System.out.print("\t");
-	        	}
-	        	System.out.println(word.charAt(counter));
-
-	            counter++;
-	        }
+//	        System.out.println("Enter a string:");
+//	        word = sc.nextLine();
+//	        while(counter<word.length()){
+//	        	
+//	        	for(int c=0;c<counter;c++){
+//	        	
+//	        	
+//	            System.out.print("\t");
+//	        	}
+//	        	System.out.println(word.charAt(counter));
+//
+//	            counter++;
+//	        }
+		 word = sc.nextLine();
+		 if(word.contains(" ^^ ")) {
+			 System.out.print("BAD");
+		 }else if(word.contains(" qey ")||word.contains(" Qey ")||(word.contains(" QEy ")||word.contains(" QEY ")||word.contains(" QeY ")||word.contains(" qEy ")||word.contains(" qeY "))) {
+				 System.out.print("BAD");
+		 }else if(word.contains(" $ ")){
+			 System.out.print("BAD");
+		 }else {
+			 System.out.print("CLEAN");
+		 }
+		 
 	}
 	}
 
