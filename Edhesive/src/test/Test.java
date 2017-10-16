@@ -268,9 +268,24 @@ public class Test {
 			
 			
 			public static void test() {
-				int num1 = 5;
-				int num2  =6;
-				int diff = Math.abs(num2 - num1);				System.out.println(diff);
+				Scanner sc = new Scanner(System.in);
+				int length,num;
+				System.out.println("How many integers would you like to enter?");
+				 length = sc.nextInt();
+				
+				int[] array = new int[length];
+				for(int spot=0;spot<length;spot++) {
+					System.out.println("Please Enter your number:");
+					num=sc.nextInt();
+					array[spot]=num;
+				} 
+				System.out.println("\nYour numbers are: ");
+				for(int spot=0;spot<length;spot++) {
+					
+					System.out.print(array[spot]+" ");
+					
+					
+				}
 				
 			}
 }
