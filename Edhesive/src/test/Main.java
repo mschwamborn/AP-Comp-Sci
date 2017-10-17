@@ -44,10 +44,9 @@ public class Main {
 //			System.out.println("Sorry, that was incorrect!\r\n" + 
 //					"Better luck next time!");
 //		}
-		 String word,name;
-		 boolean bad = false;
+		
 //	        int counter= 0;
-	        Scanner sc = new Scanner(System.in);
+	        
 //	        System.out.println("Enter a string:");
 //	        word = sc.nextLine();
 //	        while(counter<word.length()){
@@ -60,11 +59,17 @@ public class Main {
 //	        	System.out.println(word.charAt(counter));
 //
 //	            counter++;
-//	        }
-	        
+//	        } 
+	        String word,name,tempword;
+		 boolean bad = false;
+	       Scanner sc = new Scanner(System.in);
 		 word = sc.nextLine();
+		 name = word.substring(0,word.indexOf(" "));
+
 		 word = word.toUpperCase();
-		 if(word.contains(" ^^ ")) {
+		 System.out.println("Results:");
+
+		 if(word.contains(" ^^")) {
 			 System.out.println("BAD");
 			 bad = true;
 		 }else if(word.contains(" QEY ")) {
@@ -78,29 +83,34 @@ public class Main {
 		 }
 		 
 		 
-		 name = word.substring(0,word.indexOf(" "));
 		 
 		 if(bad) {
 		 int qey = word.indexOf(" QEY ");
+		 tempword = word;
 		 int countQ = 0;
 		 while (qey != -1) {
 		     countQ++;
-		     word = word.substring(qey + 1);
-		     qey = word.indexOf(" QEY ");
+		     tempword = tempword.substring(qey+4);
+		     qey = tempword.indexOf(" QEY ");
+		     
 		 }
 		 int carott = word.indexOf(" ^^ ");
 		 int countC = 0;
 		 while (carott != -1) {
-		     countQ++;
-		     word = word.substring(carott + 1);
-		     carott = word.indexOf(" ^^ ");
-		 }int dollar = word.indexOf(" $ ");
+		     countC++;
+		     tempword = word.substring(carott + 3);
+		     carott = tempword.indexOf(" ^^ ");
+		    
+		 }
+		 int dollar = word.indexOf(" $ ");
 		 int countD = 0;
 		 while (dollar != -1) {
-		     countQ++;
-		     word = word.substring(dollar + 1);
-		     dollar = word.indexOf(" $ ");
+		     countD++;
+		     tempword = word.substring(dollar+ 2 );
+		     dollar = tempword.indexOf(" $ ");
+		     
 		 }
+		 
 		 System.out.println(name + "\n^^: "+countC+"\nqey: "+countQ+"\n$: "+countD);
 		 }
 	}

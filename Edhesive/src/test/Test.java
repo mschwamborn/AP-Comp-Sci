@@ -7,7 +7,7 @@ public class Test {
 	public static void main(String[] args) {
 
 		// TODO Auto-generated method stub
-		//test();
+		ntes();
 		//HHIII
 			
 
@@ -295,6 +295,9 @@ public class Test {
 				Scanner sc=new Scanner(System.in);
 				int length;
 				String[] list;
+			}
+			public static void ntes() {
+				System.out.print(8/5*2);
 			}
 }
 	
