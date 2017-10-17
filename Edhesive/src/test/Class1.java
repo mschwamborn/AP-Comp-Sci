@@ -33,7 +33,6 @@ public class Class1 {
 	    	System.out.print("Here are the digits:"+"\n"+four+"\n"+three+"\n"+two);*/
 	    	CrackCode();
 	    	
-	    
 	    	
 	    	
 
