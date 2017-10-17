@@ -68,7 +68,7 @@ public class Main {
 		 }else if(word.contains(" $ ")){
 			 System.out.print("BAD");
 		 }else {
-			 System.out.print("CLEAN");
+			 System.out.print("CLEAN"); 
 		 }
 		 
 	}
