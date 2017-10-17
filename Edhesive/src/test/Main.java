@@ -44,7 +44,8 @@ public class Main {
 //			System.out.println("Sorry, that was incorrect!\r\n" + 
 //					"Better luck next time!");
 //		}
-		 String word;
+		 String word,name;
+		 boolean bad = false;
 //	        int counter= 0;
 	        Scanner sc = new Scanner(System.in);
 //	        System.out.println("Enter a string:");
@@ -60,26 +61,48 @@ public class Main {
 //
 //	            counter++;
 //	        }
+	        
 		 word = sc.nextLine();
 		 word = word.toUpperCase();
 		 if(word.contains(" ^^ ")) {
-			 System.out.print("BAD");
+			 System.out.println("BAD");
+			 bad = true;
 		 }else if(word.contains(" QEY ")) {
-				 System.out.print("BAD");
+				 System.out.println("BAD");
+				 bad = true;
 		 }else if(word.contains(" $ ")){
-			 System.out.print("BAD");
+			 System.out.println("BAD");
+			 bad = true;
 		 }else {
 			 System.out.print("CLEAN"); 
 		 }
-		 int index = word.indexOf("QEY");
-		 int count = 0;
-		 while (index != -1) {
-		     count++;
-		     word = word.substring(index + 1);
-		     index = word.indexOf("QEY");
-		 }
-		 System.out.println("\nNo of *qey* in the input is : " + count);
 		 
+		 
+		 name = word.substring(0,word.indexOf(" "));
+		 
+		 if(bad) {
+		 int qey = word.indexOf(" QEY ");
+		 int countQ = 0;
+		 while (qey != -1) {
+		     countQ++;
+		     word = word.substring(qey + 1);
+		     qey = word.indexOf(" QEY ");
+		 }
+		 int carott = word.indexOf(" ^^ ");
+		 int countC = 0;
+		 while (carott != -1) {
+		     countQ++;
+		     word = word.substring(carott + 1);
+		     carott = word.indexOf(" ^^ ");
+		 }int dollar = word.indexOf(" $ ");
+		 int countD = 0;
+		 while (dollar != -1) {
+		     countQ++;
+		     word = word.substring(dollar + 1);
+		     dollar = word.indexOf(" $ ");
+		 }
+		 System.out.println(name + "\n^^: "+countC+"\nqey: "+countQ+"\n$: "+countD);
+		 }
 	}
 	}
 
