@@ -61,15 +61,24 @@ public class Main {
 //	            counter++;
 //	        }
 		 word = sc.nextLine();
+		 word = word.toUpperCase();
 		 if(word.contains(" ^^ ")) {
 			 System.out.print("BAD");
-		 }else if(word.contains(" qey ")||word.contains(" Qey ")||(word.contains(" QEy ")||word.contains(" QEY ")||word.contains(" QeY ")||word.contains(" qEy ")||word.contains(" qeY "))) {
+		 }else if(word.contains(" QEY ")) {
 				 System.out.print("BAD");
 		 }else if(word.contains(" $ ")){
 			 System.out.print("BAD");
 		 }else {
 			 System.out.print("CLEAN"); 
 		 }
+		 int index = word.indexOf("QEY");
+		 int count = 0;
+		 while (index != -1) {
+		     count++;
+		     word = word.substring(index + 1);
+		     index = word.indexOf("QEY");
+		 }
+		 System.out.println("\nNo of *qey* in the input is : " + count);
 		 
 	}
 	}
