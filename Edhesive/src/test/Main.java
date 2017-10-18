@@ -110,6 +110,9 @@ public class Main {
 		     dollar = tempword.indexOf(" $ ");
 		     
 		 }
+		 if(word.charAt(word.length()-1)!= ' ') {
+			 countQ++;
+		 }
 		 
 		 System.out.println(name + "\n^^: "+countC+"\nqey: "+countQ+"\n$: "+countD);
 		 }
