@@ -539,6 +539,68 @@ public class Class1 {
 	    			public static void ntes() {
 	    				System.out.print(8/5*2);
 	    			}
+	    			public static void AlienMessage() {
+	    				 String word,name,tempword;
+	    				 boolean bad = false;
+	    			       Scanner sc = new Scanner(System.in);
+	    				 word = sc.nextLine();
+	    				 name = word.substring(0,word.indexOf(" "));
+
+	    				 word = word.toUpperCase();
+	    				 System.out.println("Results:");
+
+	    				 if(word.contains(" ^^ ")) {
+	    					 System.out.println("BAD");
+	    					 bad = true;
+	    				 }else if(word.contains(" QEY ")) {
+	    						 System.out.println("BAD");
+	    						 bad = true;
+	    				 }else if(word.contains(" $ ")){
+	    					 System.out.println("BAD");
+	    					 bad = true;
+	    				 }else {
+	    					 System.out.print("CLEAN"); 
+	    				 }
+	    				 
+	    				 
+	    				 
+	    				 if(bad) { 
+	    					if(word.charAt(word.length()-1)!= ' ') {
+	    					 word = word + " ";
+	    				 }
+	    				 
+	    				 int qey = word.indexOf(" QEY ");
+	    				 tempword = word;
+	    				 int countQ = 0;
+	    				 while (qey != -1) {
+	    				     countQ++;
+	    				     tempword = tempword.substring(qey+4);
+	    				     qey = tempword.indexOf(" QEY ");
+	    				     
+	    				 }
+	    				 int carrot = word.indexOf(" ^^ ");
+	    				 int countC = 0;
+	    				 tempword = word;
+	    				 while (carrot != -1) {
+	    				     countC++;
+	    				     tempword = tempword.substring(carrot+3);
+	    				     carrot = tempword.indexOf(" ^^ ");
+	    				    
+	    				 }
+	    				 int dollar = word.indexOf(" $ ");
+	    				 int countD = 0;
+	    				 tempword = word;
+	    				 while (dollar != -1) {
+	    				     countD++;
+	    				     tempword = tempword.substring(dollar+ 2 );
+	    				     dollar = tempword.indexOf(" $ ");
+	    				     
+	    				 }
+	    				 
+	    				 System.out.println(name + "\n^^: "+countC+"\nqey: "+countQ+"\n$: "+countD);
+	    				 }
+	    			}
+	    		
 }
 	    	
 
