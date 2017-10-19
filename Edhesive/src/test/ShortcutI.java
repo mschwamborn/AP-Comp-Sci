@@ -8,6 +8,8 @@ public interface ShortcutI {
 	void Scanner();
  String ScanInput();
  	void PrintScan();
+ 	void IntArray(int length);
+ 	void FillIntArray();
 	
 
 }

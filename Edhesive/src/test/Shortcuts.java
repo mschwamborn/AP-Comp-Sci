@@ -4,6 +4,7 @@ import java.util.*;
 public class Shortcuts implements ShortcutI{
 	 public static final Shortcuts s = new Shortcuts();
 	 public static Scanner scan;
+	 public static int[] Uarray;
 	
 	public void Print(String input) {
 		System.out.print(input);
@@ -21,6 +22,18 @@ public class Shortcuts implements ShortcutI{
 	}
 	public void PrintScan() {
 		System.out.print(s.ScanInput());
+	}
+	public void IntArray(int length) {
+		int[] array = new int [length];
+		Uarray = array;
+	}
+	public void FillIntArray() {
+		int fill;
+		final Scanner scanner = new Scanner (System.in);
+		for(int c = 0;c<Uarray.length;c++) {
+			fill = scanner.nextInt();
+			Uarray[c] = fill;
+		}
 	}
 	
 	
