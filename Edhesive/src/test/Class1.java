@@ -7,30 +7,7 @@ import java.util.*;
 public class Class1 {
 	
 	    public static void main(String[] args) {
-	    	//int one,two,three,four;
-	    
-	    	/*Scanner scan=new Scanner(System.in);
-	    	/*Scanner sc=new Scanner(System.in);
-	    	System.out.println("Please input a decimal number:");
-	    	int two = (int)(sc.nextDouble()*100);
-	    	int three = two/100*100;
-	    	int four = two-three;
-	    	System.out.println("Answer: " + four);*/
-	    	//yg = (Double)the;
 	    	
-	    	/**int test1 = 1;
-	    	int test2 = scan.nextInt();
-	    	double averfage = ((double)(test1 + test2) )/2;
-	    	System.out.println("Answer: " + average);
-	    	int i = 3; // i is 3
-	    	double d = (double) i; // d = 3.0*
-	    	
-	    	System.out.print("Please enter a three digit number:");
-	    	one = scan.nextInt();
-	    	two = one%10;
-	    	three =((one-two)/10)%10;
-	    	four = ((one-three)/100);
-	    	System.out.print("Here are the digits:"+"\n"+four+"\n"+three+"\n"+two);*/
 	    	CrackCode();
 	    	
 	    	
@@ -166,14 +143,7 @@ public class Class1 {
 //	            }
 //	            HEy
 //	            System.out.println(even);
-	    		int num = sc.nextInt();
-	    		 int sum = 0;
-
-	    		while ( num > 0) {
-	    		    sum += num % 10;
-	    		    num /= 10;
-	    		}
-	    		System.out.print(sum);
+	    	
 	    		
 	    	}
 	    	public static void latlong() {
