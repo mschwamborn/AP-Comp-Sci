@@ -2,9 +2,9 @@ package test;
 
 
 import java.util.*;
+ 
 
-
-public class Class1 {
+public class Classwork {
 	
 	    public static void main(String[] args) {
 	    	
@@ -56,7 +56,7 @@ public class Class1 {
 
 		    	System.out.println("Overall movie rating: "+overallAv);
 
-	    	}
+	    	sc.close();}
 	    	public static void code1(String[]arg){
 	    		 int one,two,three,four;
 	    	        Scanner scan=new Scanner(System.in);
