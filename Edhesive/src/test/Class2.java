@@ -2,14 +2,19 @@ package test;
 
 
 import java.util.*;
- 
 
-public class Classwork {
+
+public class Class2 {
 	
-	    public static void main(String[] args)
-	    {
+	    public static void main(String[] args) {
 	    	
 	    	CrackCode();
+	    	
+	    	
+	    	
+
+	    	  
+	    	
 	    }
 
 	    	public static void code() {
@@ -51,9 +56,8 @@ public class Classwork {
 
 		    	System.out.println("Overall movie rating: "+overallAv);
 
-	    	sc.close();
-	    	}
-	    	public static void code1(){
+	    	sc.close();}
+	    	public static void code1(String[]arg){
 	    		 int one,two,three,four;
 	    	        Scanner scan=new Scanner(System.in);
 	    		    	System.out.print("Please enter a three digit number:");
@@ -65,6 +69,7 @@ public class Classwork {
 	    		    	//This is Just Question 2 
 	    		    	//System.out.print("\n"+ four + "+"+three+"+"+two+"="+(four+three+two));
 	    	}
+	    	
 	    	public static void  time(){
 	    		Scanner scan = new Scanner (System.in);
 	    		int input;
@@ -118,6 +123,9 @@ public class Classwork {
 	    		System.out.println("Min: " + min);
 	    		System.out.println("Sec: " + sec);
 	    	}*/
+	    
+
+	    	
 	    	public static void test() {
 		Scanner sc = new Scanner(System.in);
 //	            int input1,input2,count=0,mod;
@@ -173,6 +181,7 @@ public class Classwork {
 				System.out.println("Farthest West: "+leastLat);
 			
 	    	}
+	    	
 	    	public static void CrackCode() {
 	    		String name;
 	    		int one, two, three;
@@ -220,6 +229,7 @@ public class Classwork {
 	    		System.out.print(Math.abs(20-50));//Absolute Value Between two numbers
 	    		
 	    	}
+	    	
 	    	public static void movie() {
 	    		Scanner sc = new Scanner(System.in);
 
@@ -261,6 +271,7 @@ public class Classwork {
 
 	    		System.out.println("Overall movie rating: "+overallAv);
 	    	}
+
 	    	public static void tes2t() {
 	    		Scanner sc = new Scanner(System.in);
 	    		
@@ -275,6 +286,8 @@ public class Classwork {
 	    		String nameLast = name.substring(space+1, name.length());
 	    		System.out.print(nameFirst+" \n"+nameLast);
 	    	}
+	    	
+
 	    	public static void test1() {
 	    		
 	    		
@@ -297,7 +310,8 @@ public class Classwork {
 	    				        }
 	    				        
 	    				        
-	    		    } 
+	    		    }
+	    		   
 	    	public static void ed() { 	    
 	    		Scanner sc = new Scanner(System.in);
 	            System.out.println("Please enter the first octet:");
@@ -322,6 +336,9 @@ public class Classwork {
 	                System.out.print("IP Address: "+input1+"."+input2+"."+input3+"."+input4);
 	            }
 	    	}
+	    		
+	    				        
+	    	
 	    	public static void lab1() {
 	    		int one,two,largest,smallest;
 	    		 
@@ -344,6 +361,7 @@ public class Classwork {
 	    		}
 	    		System.out.println("largest == "+largest+"\n"+"smallest == "+smallest);
 	    	}
+	    		
 	    	public static void lab2() {
 	    		String one = "hello";
 	    		String two = "goodbye";
@@ -357,6 +375,7 @@ public class Classwork {
 
 	    		}
 	    	}
+	    	
 	    	public static void lab3() {
 	    		String one = "one";
 	    		String two = "two";
@@ -428,7 +447,7 @@ public class Classwork {
 	    		}
 
 	    		}
-	    	public static void lab7() {
+	    		public static void lab7() {
 
 	    		Scanner sc = new Scanner(System.in);
 
@@ -447,7 +466,7 @@ public class Classwork {
 	    		System.out.print(hyphen);
 
 	    		}
-	   		public static void TestHW() {
+	    			public static void TestHW() {
 	    			Scanner sc = new Scanner(System.in);
 	    			System.out.println("Enter one string that contains city and state and zipcode.");
 	    			String input = sc.nextLine();
@@ -456,7 +475,9 @@ public class Classwork {
 	    			String zip = input.substring(input.lastIndexOf(" ")+1);
 	    			System.out.println(city+"\n"+state+"\n"+zip);
 	    			}
-	    	public static void TempAverageArray() {
+	    			
+	    			
+	    			public static void TempAverageArray() {
 	    				Scanner sc = new Scanner(System.in);
 	    				int length,num,sum=0;
 	    				System.out.println("How many tempratures would you like to enter?");
@@ -480,15 +501,15 @@ public class Classwork {
 	    				System.out.println("\nThe average is: \n" + ((double)sum/array.length));
 	    		
 	    			}
-	    	public static void groceriesList() {
+	    			public static void groceriesList() {
 	    				Scanner sc=new Scanner(System.in);
 	    				int length;
 	    				String[] list;
 	    			}
-	   		public static void ntes() {
+	    			public static void ntes() {
 	    				System.out.print(8/5*2);
 	    			}
-	    	public static void AlienMessage() {
+	    			public static void AlienMessage() {
 	    				 String word,name,tempword;
 	    				 boolean bad = false;
 	    			       Scanner sc = new Scanner(System.in);

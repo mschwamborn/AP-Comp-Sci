@@ -19,6 +19,8 @@ public class Test extends Shortcuts {
 		     System.out.print(x + " ");
 		     x += 2;
 		 }
+		 
+		 
 		
 		
 		

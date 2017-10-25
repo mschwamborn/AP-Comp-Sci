@@ -10,6 +10,7 @@ public interface ShortcutI {
  	void PrintScan();
  	void IntArray(int length);
  	void FillIntArray();
+ 	
 	
 
 }
