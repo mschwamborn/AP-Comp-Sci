@@ -549,7 +549,17 @@ public class Classwork {
 	    				 System.out.println(name + "\n^^: "+countC+"\nqey: "+countQ+"\n$: "+countD);
 	    				 }
 	    			}
+	    	public static void ReverseStringArray(){
+	    		String list [] = {"every", "nearing", "checking", "food", "stand", "value"};
 	    		
+	    		String word = null;
+	    		for (int i=0; i < list.length; i++)
+	    		{
+	    			word = new StringBuilder(list[i]).reverse().toString();
+	    			System.out.println(word);
+	    		
+	    	}
+	    }
 }
 	    	
 
