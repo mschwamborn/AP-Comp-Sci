@@ -12,7 +12,7 @@ public class Test extends Shortcuts {
 //		 s.PrintScan();
 //		 s.IntArray(10);
 //		 s.FillIntArray();
-//		 
+//		 Test
 		 int x = 5;
 		 while (x < 9)
 		 {
