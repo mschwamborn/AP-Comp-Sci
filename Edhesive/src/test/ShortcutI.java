@@ -3,6 +3,7 @@ package test;
 public interface ShortcutI {
 	
 	
+	
 	void Print(String input);
 	void PrintLn(String input);
 	void Scanner();

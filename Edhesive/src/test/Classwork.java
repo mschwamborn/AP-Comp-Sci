@@ -9,7 +9,7 @@ public class Classwork {
 	    public static void main(String[] args)
 	    {
 	    	
-	    	CrackCode();
+	    	ReverseStringArray();
 	    }
 
 	    	public static void code() {
@@ -552,13 +552,23 @@ public class Classwork {
 	    	public static void ReverseStringArray(){
 	    		String list [] = {"every", "nearing", "checking", "food", "stand", "value"};
 	    		
-	    		String word = null;
-	    		for (int i=0; i < list.length; i++)
+	    		String word = "";
+	    		/*for (int i=0; i < list.length; i++)
 	    		{
 	    			word = new StringBuilder(list[i]).reverse().toString();
 	    			System.out.println(word);
 	    		
+	    	}*/
+	    		for(int i =0; i<list.length;i++) {
+	    			word = "";
+	    			for(int u = list[i].length()-1; u>=0; u-- ) {
+		    			word += list[i].charAt(u); 
+	    			}
+	    			System.out.println(word);
+	    			
 	    	}
+	    		
+	    	
 	    }
 	    	public static void RemoveSpace() {
 	    		String [] list = {"O ne", "T w o", " Th ree ",};
@@ -580,7 +590,7 @@ public class Classwork {
 	    		System.out.print(list[0]+list[1]+list[2]);
 
 	    	}
-	    	
+	    
 
 }
 	    	

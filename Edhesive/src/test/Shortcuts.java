@@ -7,6 +7,7 @@ public class Shortcuts implements ShortcutI{
 	 public static int[] Uarray;
 	
 	public void Print(String input) {
+		
 		System.out.print(input);
 	}
 	public void PrintLn(String input) {
