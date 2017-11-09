@@ -9,7 +9,6 @@ public class Main {
 	public static void main(String[] args) 
 	{
 		
-		monthDays(7);
 		
 	}
 	
@@ -23,4 +22,9 @@ public class Main {
 	   System.out.println(selMonth);
 	}
 	
+	public static void swap(int one, int two) {
+		
+		System.out.println(two+" "+ one);
+
+	}
 }
