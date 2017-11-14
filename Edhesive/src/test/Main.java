@@ -5,26 +5,46 @@ import java.util.*;
 
 public class Main {
 	
-	 
+	 public static String [] strg;
+	 //public static int [] ints = new int[3];
 	public static void main(String[] args) 
 	{
-		
-		
-	}
+		 int [] ints = {1,2,3};
+reverse(ints);
+
 	
+	}
+	 
     
 
 	
-	public static void monthDays(int num)
-	{
-	   String months[] = {"30","28","31","30","31","30","31","31","30","31","30","31"};
-	   String selMonth = months[num-1];
-	   System.out.println(selMonth);
-	}
 	
-	public static void swap(int one, int two) {
+	
+	
+	public static void reverse(int[] array) {
+		int length = array.length;
+		int[] temp = new int [length];
+		int count = 0;
 		
-		System.out.println(two+" "+ one);
-
+			for(int v = array.length-1; v >=0; v-- ) {
+			 temp[v] = array[v];
+			 
+			 
+			}
+			for(int v = array.length-1; v >=0; v-- ) {
+				 array[v] = temp[count];
+				 
+				 count++;
+				}
+			System.out.print(array[0]+" "+array[1]+" "+array[2]+" ");
+			
+		}
+	
+	public static void insertValue(int[] array, int data, int place) {
+		array[place] = data;
 	}
+
+	
+
+	
 }
