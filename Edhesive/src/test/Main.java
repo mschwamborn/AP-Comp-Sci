@@ -8,9 +8,9 @@ public class Main {
 	 public static String [] strg;
 	 //public static int [] ints = new int[3];
 	public static void main(String[] args) 
-	{
-		 int [] ints = {1,2,3};
-reverse(ints);
+	{int [] ints = {1,2,3};
+		 
+insertValue(ints,1,2);
 
 	
 	}
@@ -41,7 +41,10 @@ reverse(ints);
 		}
 	
 	public static void insertValue(int[] array, int data, int place) {
-		array[place] = data;
+		for( int i= array.length-1; i>place;i--) {
+			array[i] =array[i-1];
+		}
+		 array[place]  =data;
 	}
 
 	

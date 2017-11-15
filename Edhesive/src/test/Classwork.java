@@ -590,7 +590,13 @@ public class Classwork {
 	    		System.out.print(list[0]+list[1]+list[2]);
 
 	    	}
-	    
+	    	public static void insertValue(int[] array, int data, int place) {
+	    		for( int i= array.length-1; i>place;i--) {
+	    			array[i] =array[i-1];
+	    		}
+	    		 array[place]  =data;
+	    	}
+
 
 }
 	    	
