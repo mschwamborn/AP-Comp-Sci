@@ -5,7 +5,8 @@ import java.util.*;
 
 public class Main {
 	static Scanner scan = new Scanner (System.in);
-	static boolean incorrectOrder;
+	static boolean incorrectOrder1 = false;
+	static boolean incorrectOrder2 = false;
 	
 	 public static String [] strg;
 	 //public static int [] ints = new int[3];
@@ -107,7 +108,8 @@ public class Main {
 		String temp = "";
 		String [] one = new String[10000]; 
 		String[] two = new String[10000];
-		String merge = "";
+		String text = null;
+		String last = temp;
 		System.out.println("Enter the values for the first array, up to 10000 values, enter 'End' to quit");
 		
 		for(int i = 0; i<one.length;i++) {
@@ -116,134 +118,250 @@ public class Main {
 				break;
 			}
 			one[i] = temp.substring(0,1).toUpperCase()+  temp.substring(1);
+			if(temp.compareTo(last)<0) {
+				incorrectOrder1 = true;
+				
+			}
+			last = temp;
 		}
 		
 		
-		System.out.println("Enter the values for the second array, up to 10000 values, enter 'End' to quit");
-		
+		System.out.println("\nEnter the values for the second array, up to 10000 values, enter 'End' to quit");
+		last ="";
 		for(int i =0;i <two.length;i++) {
 			temp = sc.nextLine().toLowerCase();
 			if(temp.equals("end")) {
 				break;
 			}
-			two[i] = temp.substring(0,1).toUpperCase()+  temp.substring(2)+" ";
-		}
-		for(int i=0;i<one.length;i++) {
-			if(one[i].equals(null)) {
-				break;
+			two[i] = temp.substring(0,1).toUpperCase()+  temp.substring(1);
+			if(temp.compareTo(last)<0) {
+				incorrectOrder1 = true;
+				
 			}
-			else {
-				System.out.print(one[i]+" ");
-			}
-		
-		}
-		System.out.println(one[0]);
-		
-	}
-	
-	
-	public static void arrayEntry() {
-		/*String[] arrayOne = new String[10000];
-		String[] arrayTwo = new String[10000];
-		
-		arrayOne = entryCode(1);
-		arrayTwo = entryCode(2);
-		*/
-		merge(entryArray(1), entryArray(2));
-	}
-	
-//ENTRYCODE
-	public static String[] entryArray(int arrayNum) {
-		boolean continue_entry = true; //flag varible
-		int elementNum = 0;
-		String text = null;
-		String last_entry = "";
-		String[] array = new String[10000];
-		if(arrayNum == 1) {
-			text = "first";
-		}
-		else if(arrayNum == 2) {
-			text = "second";
+			last = temp;
 		}
 		
+		one  =deletedArray(one);
 		
-		System.out.println("Enter the values for the " + text + " array, up to 10000 values, enter 'End' to quit");
-		while(continue_entry) {
-			String entry = scan.nextLine(); //scans for name
-			array[elementNum] = entry; //sets entry to it's element in the array
+		two  =deletedArray(two);
+		String[] mergedNull = new String[deletedArray(one).length+deletedArray(two).length]; 
+		int x = 0;
+		int y = 0;
+		int z = 0;
+		int flag =0;
+	
+		
+		
+		if(!incorrectOrder1||!incorrectOrder2) {
+		while(z<=(one.length+two.length)-1&&flag==0) 
+		{
 			
-			if(entry.toUpperCase().compareTo("END")==0) { //If entry is less than last entry or if is "END"
-				continue_entry = false;
+			if(x!=one.length&&one[x].compareTo(two[y])<=0) 
+			{
+				
+				mergedNull[z] = one[x];
+				/*System.out.println(x);
+				System.out.println(y);
+				System.out.println(z);
+				System.out.println(flag);
+				System.out.println(Arrays.toString(mergedNull));
+				System.out.println(" ");*/
+				
+				if(x==one.length-1)
+					flag =1;
+				
+				if(x<one.length-1) 
+					x++;
+				if(z<=(one.length+two.length)-1)
+					z++;
+			}	
+				
+				
+			
+			if(y!=two.length&&one[x].compareTo(two[y])>0) 
+			{
+				
+				mergedNull[z] = two[y];
+				/*System.out.println(x);
+				System.out.println(y);
+				System.out.println(z);
+				System.out.println(flag);
+				System.out.println(Arrays.toString(mergedNull));
+				System.out.println(" ");*/
+				
+				if(y==two.length-1)
+					flag =2;
+
+				if(y<two.length-1) 
+				    y++;
+				if(z<=(one.length+two.length)-1)
+					z++;
 			}
-			if(entry.compareTo(last_entry)<0) {
-				incorrectOrder = true;
+			
+			
 			}
-			last_entry = entry;
-			elementNum++;
-		}
-		
-		
-		
-		return array;
-	}
 	
-//MERGE
-	public static void merge(String [] arrayOne, String [] arrayTwo) {
-		String[] mergedArray = new String[20000]; //20,000 because if arrayOne has 10,000 and arrayTwo has 10,000.  Combined will be 20,000
-		int elementNumOne = 0;
-		int elementNumTwo = 0;
-		int elementNumMerged = 0;
+//		    System.out.println("Flag : "+flag);
+			if(flag==1) 
+			{
+				while(y<=two.length-1) 
+				{
+					mergedNull[z] = two[y];
+					z++;
+					y++;
+				}
+			}
+			if(flag==2) 
+			{
+				while(x<=one.length-1) 
+				{
+					mergedNull[z] = one[x];
+					z++;
+					x++;
+				}
+			}
+				
+		}	
+			
+			
+			
 		
-		System.out.println("BEFORE MERGE");
-		//TODO review how compareTo works, does it compare this to var to var to this
-		while(elementNumOne<=10000 && elementNumTwo<=10000) {
-			if(arrayOne[elementNumOne].compareTo(arrayTwo[elementNumTwo])<=0 ) {
-				System.out.println("INSIDE IF");
-				mergedArray[elementNumMerged] = arrayOne[elementNumOne];
-				elementNumMerged++;
-				elementNumOne++;
-			}
-			else{
-				System.out.println("INSIDE ELSE");
-				mergedArray[elementNumMerged] = arrayTwo[elementNumOne];
-				elementNumMerged++;
-				elementNumTwo++;
-			}
+		
+		
+		System.out.println("\n\nFirst Array");
+		for(int i =0;i <one.length;i++) { 
+			if(i <one.length-1)
+			System.out.print(orderArray(deletedArray(one))[i]+" ");
+			else
+				System.out.print(orderArray(deletedArray(one))[i]);
+
 		}
-		System.out.println("REACHED PRINTING");
-		/*print(arrayOne, 1);
-		print(arrayTwo, 2);
-		print(mergedArray, 3);*/
-	}
-	
-	
-//PRINT
-	public static void print(String [] array, int arrayNum) { //This method prints out the merged array
-		String text = null;
-		if(arrayNum == 1) {
-			text = "First";
+		System.out.println("\n\nSecond Array");
+		for(int i =0;i <two.length;i++) {
+			if(i<two.length-1)
+			System.out.print(orderArray(deletedArray(two))[i]+" ");
+			else
+				System.out.print(orderArray(deletedArray(two))[i]);
+
 		}
-		else if(arrayNum == 2) {
-			text = "Second";
-		}
-		else if(arrayNum == 3) {
-			text = "Merged";
-		}
+		if(incorrectOrder1||incorrectOrder2)
+		System.out.print("\n\nError: Arrays not in correct order");
 		else {
-			System.out.println("ERROR - arrayNum not 1 or 2 or 3");
-		}
-		
-		System.out.println();
-		System.out.println(text + " Array");
-		for(int i = 0; i < array.length; i++) {
-			if(array[i] != null) { //checks if there is something in the array element
-				if(i==array.length-1) //prints the last element without a space at the end
-					System.out.print(array[i]);
-				else
-					System.out.print(array[i] + " "); //prints element with one space at the end
+			System.out.println("\n\nMerged Array");
+			for(int i =0;i <deletedArray(mergedNull).length;i++) {
+				if(i<mergedNull.length-1)
+					System.out.print(deletedArray(mergedNull)[i]+" ");
+					else
+						System.out.print(deletedArray(mergedNull)[i]);
+
+				
+				
+				
 			}
 		}
+			
 	}
+	
+	public static String [] deletedArray(String [] array ) {
+		int numOfNum = 0;
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] == null) {
+				numOfNum++;
+			}
+		}
+		
+		
+		String[] newArray = new String [(array.length-numOfNum)];
+		int newArrayIndex = 0;
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] != null) {
+				newArray[newArrayIndex]=array[i];
+				newArrayIndex++;
+			}
+		}
+		
+		return newArray;
+	}
+	public static String [] orderArray(String [] array ) {
+		
+		String[] arrayR = new String [array.length];
+		String[] arrayC = new String [array.length];
+		arrayR[0]=array[0];
+		arrayC = arrayR.clone();
+		for(int i = 1; i < array.length; i++)
+		{
+			String compare = array[i];
+			if(i<=array.length-1) 
+			{
+				
+				int u =0;
+				while(u<arrayR.length) {
+	
+					
+					
+					if(arrayR[u]==null) 
+					{
+						arrayR[u]  = compare;
+						arrayC = arrayR.clone();
+						
+					break;
+					}
+					
+					if(compare.compareTo(arrayR[u])<=0) 
+					{
+						
+						arrayR[u] = compare;
+						
+						for(int q =u;q<arrayR.length;q++)
+						{
+							
+							
+							if(arrayC[q]==null) {
+								
+
+								break;
+							}
+							if(u<arrayR.length-1) 
+							{
+								arrayR[u+1] = arrayC[q];
+								
+								u++;
+							}
+												
+						
+						}
+						arrayC = arrayR.clone();
+						 break;
+					}
+					
+					else
+					{
+						u++;
+						
+					
+					}
+					
+					
+				}
+				
+				
+				
+			}
+			
+		}
+		
+		
+		return arrayR;
+	}
+	public static void insertValue(int[] array, int data, int place) {
+		for( int i= array.length-1; i>place;i--) {
+			array[i] =array[i-1];
+		}
+		 array[place]  =data;
+	}
+	
+	
+	
 
 	
 }
