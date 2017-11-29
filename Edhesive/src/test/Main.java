@@ -10,8 +10,8 @@ public class Main {
 	 //public static int [] ints = new int[3];
 	public static void main(String[] args) 
 	{
-		System.out.print(printDecimal(2));
-	
+		System.out.print(printDecimal(4));
+	//fun(3);
 
 	
 	}
@@ -37,9 +37,13 @@ public class Main {
 		if(n<1)
 			return 1;
 		else
-		return n+printDecimal(n-2)+printDecimal(n-3);
+		return n+printDecimal(n-1)+printDecimal(n-2);
 	}
-	
+	static void fun(int x){
+		if(x>=1){      
+			fun(x-1);   
+			System.out.print(x); 
+			}}
 
 	
 }
