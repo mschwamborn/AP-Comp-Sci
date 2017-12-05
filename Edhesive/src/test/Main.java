@@ -10,10 +10,16 @@ public class Main {
 	 //public static int [] ints = new int[3];
 	public static void main(String[] args) 
 	{
-		System.out.print(printDecimal(4));
-	//fun(3);
+		ArrayList<String> laundry = new ArrayList<String>();
 
-	
+		laundry.add("shirt");
+		laundry.add("sock");
+		laundry.add("sock");
+		laundry.add("sweater");
+		laundry.add("shorts");
+		laundry.remove("sock");
+
+		System.out.println(laundry);
 	}
 	
 	public static int randomize(int min, int max) {
@@ -37,7 +43,7 @@ public class Main {
 		if(n<1)
 			return 1;
 		else
-		return n+printDecimal(n-1)+printDecimal(n-2);
+		return n+printDecimal(n-2)+printDecimal(n-3);
 	}
 	static void fun(int x){
 		if(x>=1){      
