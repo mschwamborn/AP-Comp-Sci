@@ -5,7 +5,8 @@ import java.util.*;
  
 
 public class Classwork {
-	
+	static Scanner scan = new Scanner (System.in);
+
 	    public static void main(String[] args)
 	    {
 	    	
@@ -927,6 +928,26 @@ public class Classwork {
 	    		return pos;
 	    	}
 	    	
+	    	public static void arrayListUntilSTOP() {
+	    		ArrayList<String> array = new ArrayList<String>();
+	    		System.out.println("Please enter words, enter STOP to stop the loop.");
+	    		while(1>0) {
+	    			String data = scan.nextLine();
+	    			if(data.equals("STOP"))
+	    				break;
+	    			array.add(data);
+	    			
+	    		}
+	    		
+	    		System.out.println(array.size());
+	    		System.out.println(array);
+	    		if(!array.isEmpty()&&array.size()!=1) {
+	    			array.remove(0);
+	    			array.remove(array.size()-1);
+	    		}
+	    		System.out.println(array);
+	    		
+	    	}
 	    	
 
 }

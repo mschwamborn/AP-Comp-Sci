@@ -10,16 +10,26 @@ public class Main {
 	 //public static int [] ints = new int[3];
 	public static void main(String[] args) 
 	{
-		ArrayList<String> laundry = new ArrayList<String>();
-
-		laundry.add("shirt");
-		laundry.add("sock");
-		laundry.add("sock");
-		laundry.add("sweater");
-		laundry.add("shorts");
-		laundry.remove("sock");
-
-		System.out.println(laundry);
+		ArrayList<String> array = new ArrayList<String>();
+		System.out.println("Please enter words, enter STOP to stop the loop.");
+		while(1>0) {
+			String data = scan.nextLine();
+			if(data.equals("STOP"))
+				break;
+			array.add(data);
+			
+		}
+		
+		System.out.println(array.size());
+		System.out.println(array);
+		if(!array.isEmpty()&&array.size()!=1) {
+			array.remove(0);
+			array.remove(array.size()-1);
+		}
+		System.out.println(array);
+		
+		
+		
 	}
 	
 	public static int randomize(int min, int max) {
