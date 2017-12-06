@@ -11,6 +11,7 @@ public class Main {
 	public static void main(String[] args) 
 	{
 		ArrayList<String> array = new ArrayList<String>();
+
 		System.out.println("Please enter words, enter STOP to stop the loop.");
 		while(1>0) {
 			String data = scan.nextLine();
@@ -19,14 +20,12 @@ public class Main {
 			array.add(data);
 			
 		}
-		
-		System.out.println(array.size());
-		System.out.println(array);
-		if(!array.isEmpty()&&array.size()!=1) {
-			array.remove(0);
-			array.remove(array.size()-1);
+
+		for (int i = 0; i <array.size();i++) {
+		    if (array.get(i).indexOf('a')!= -1) {
+		        System.out.println(array.get(i));
+		    }
 		}
-		System.out.println(array);
 		
 		
 		

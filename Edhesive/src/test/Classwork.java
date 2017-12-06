@@ -10,7 +10,7 @@ public class Classwork {
 	    public static void main(String[] args)
 	    {
 	    	
-	    	ReverseStringArray();
+	    	arrayListUntilSTOP();
 	    }
 
 	    	public static void code() {
