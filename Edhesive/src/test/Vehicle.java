@@ -7,7 +7,6 @@ public class Vehicle {
 	
 	public  Vehicle() {
 		location = 0;
-		toString();
 	}
 
 	public   Vehicle(int loc) {
@@ -38,10 +37,19 @@ public class Vehicle {
 		return location;
 	}
 	
+	
 	public String toString() {
 		String loc = "";
+		int numOfspace = 0;
 		
-		for(int i =0; i<location; i++) {
+		if(location!=Math.abs(location))
+			numOfspace = Math.abs(20+location);
+		else if(location == 0)
+			numOfspace = 20;
+		else
+			numOfspace  = 20+location;
+			
+		for(int i =0; i<numOfspace; i++) {
 			loc = loc + " ";
 		}
 		loc = loc + "@";
