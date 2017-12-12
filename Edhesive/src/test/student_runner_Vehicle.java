@@ -11,9 +11,9 @@ public class student_runner_Vehicle
             Vehicle v1 = new Vehicle (-18);
             
            
-            System.out.println(v1);
             
-            /*for (int i = 1; i < 5; i ++)
+            
+            for (int i = 1; i < 5; i ++)
             {
                  v1.forward();
                  System.out.println(v1);
@@ -44,7 +44,7 @@ public class student_runner_Vehicle
             v3.backward();
             System.out.println(v3.getLocation());
             v3.backward();
-            System.out.println(v3.getLocation());*/
+            System.out.println(v3.getLocation());
        
        }
      
