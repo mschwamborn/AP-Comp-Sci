@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class student_runner_Vehicle
 {
        public static void main (String str[]) throws IOException {
-            Vehicle v1 = new Vehicle (-18);
+            Vehicle v1 = new Vehicle (17);
             
            
             
