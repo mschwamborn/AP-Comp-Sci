@@ -12,6 +12,9 @@ package magpie;
 
 public class Magpie3
 {
+	public static void main(String[] args) {
+		findKeyword("She's my sister", "sister", 0);
+	}
 	/**
 	 * Get a default greeting
 	 * 
@@ -70,7 +73,7 @@ public class Magpie3
 	 * @return the index of the first occurrence of goal in
 	 *         statement or -1 if it's not found
 	 */
-	private int findKeyword(String statement, String goal,
+	/*private int findKeyword(String statement, String goal,
 			int startPos)
 	{
 		String phrase = statement.trim();
@@ -118,6 +121,36 @@ public class Magpie3
 		}
 
 		return -1;
+	}*/
+	private static int findKeyword(String statement, String goal, int startPos)
+	{
+	String phrase = statement.trim();
+	int psn = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
+	while (psn >= 0)
+	{
+	String before = " ", after = " ";
+	if (psn > 0)
+	{
+	before = phrase.substring (psn - 1, psn).toLowerCase();
+	}
+	if (psn + goal.length() < phrase.length())
+	{
+	after = phrase.substring(psn + goal.length(),
+	psn + goal.length() + 1).toLowerCase();
+	}
+	System.out.println(psn);
+	/* determine the values of psn, before, and after at this point in the method. */
+	if (((before.compareTo ("a") < 0 ) || (before.compareTo("z") > 0))
+	&&
+	((after.compareTo ("a") < 0 ) || (after.compareTo("z") > 0)))
+	{
+	return psn;
+	}
+	psn = phrase.indexOf(goal.toLowerCase(), psn + 1);
+	}
+	System.out.println(psn);
+	return -1;
+	
 	}
 
 	/**
@@ -138,7 +171,8 @@ public class Magpie3
 	{
 		return findKeyword(statement, goal, 0);
 	}
-
+	
+	
 	/**
 	 * Pick a default response to use if nothing else fits.
 	 * 
