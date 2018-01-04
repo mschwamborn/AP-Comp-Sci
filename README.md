@@ -3,7 +3,7 @@ Area to Sync code from APCS Class and home.
 
 Hey!
 I don't really know why you're reading this, unless what you like to do is surf GitHub for random public repositories and if that's the 
-  case then I won't judge.
+  case then I won't judge. #I AM OFFENDED, thats what I do :)
 If you're wondering what this repository is, it's a way for me to sync my java files from my Ap Computer Science class at 
   school to my computer at home and vice-versa.
 So, yeah, you're free to look around my code and stuff  ¯\_(ツ)_/¯
