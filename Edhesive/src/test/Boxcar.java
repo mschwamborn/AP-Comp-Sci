@@ -34,9 +34,9 @@ public class Boxcar
     		c.toLowerCase().equals("gadgets")||
     		c.toLowerCase().equals("widgets")||
     		c.toLowerCase().equals("wadgets")) {
-    		cargo  =c;
+    		cargo  =c.toLowerCase();
     	}else {
-    		c = "gizmos";
+    		cargo = "gizmos";
     	}
     	
     	if(u>=0&&u<=10)
@@ -62,9 +62,10 @@ public class Boxcar
         
     	String service ;
     	if(repair)
-    		service = "in service";
-    	else
+    		
     		service = "in repair";
+    	else
+    		service = "in service";
         return numUnits+" "+cargo+"\t"+service;
     }
     
@@ -73,14 +74,18 @@ public class Boxcar
     // would go beyond the maximum, keep numUnits at the max capacity.
     // If the repair variable is true, then numUnits may only be set to 0.
     public void loadCargo() {
-        /* missing code */  
+        if(numUnits<10&&!repair)
+        	numUnits++;
+        if(repair)
+        	numUnits=0;
+        
     }
     
     // The getCargo method returns the cargo of the boxcar.
     public String getCargo()
     {
-        /* missing code (don't forget to update the return statement) */
-        return "";
+        
+        return cargo;
     }
     
     // The setCargo method sets the cargo type of the boxcar. The cargo variable is
@@ -90,20 +95,30 @@ public class Boxcar
     // to "gizmos". 
     public void setCargo(String c)
     {
-        /* missing code */
+    	if(c.toLowerCase().equals("gizmos")||
+        		c.toLowerCase().equals("gadgets")||
+        		c.toLowerCase().equals("widgets")||
+        		c.toLowerCase().equals("wadgets")) {
+        		cargo  =c.toLowerCase();
+        	}else {
+        		cargo = "gizmos";
+        	}
     }
     
     // The isFull method returns true if numUnits is equal to 10, false otherwise.
     public boolean isFull()
     {
-        /* missing code (don't forget to update the return statement) */
-        return false;
+        if(numUnits==10)
+        return true;
+        else
+        	return false;
     }
     
     // The callForRepair method sets the variable repair to true, and numUnits to 0.
     public void callForRepair()
     {
-        /* missing code */
+        repair = true;
+        numUnits =0;
     }
     
     public static void main(String[] args)
