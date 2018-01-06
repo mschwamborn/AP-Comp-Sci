@@ -10,7 +10,7 @@ public class Classwork {
 	    public static void main(String[] args)
 	    {
 	    	
-	    	arrayListUntilSTOP();
+	    	assignment6();
 	    }
 
 	    	public static void code() {

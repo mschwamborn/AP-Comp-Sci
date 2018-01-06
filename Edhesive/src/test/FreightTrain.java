@@ -16,7 +16,7 @@ public class FreightTrain
     // boxcar containing 5 gizmos, that is not in repair.
     public FreightTrain()
     {
-        /* missing code */
+       train.add(new Boxcar());
     }
     
     // A constructor that sets train to an ArrayList of size n, holding
@@ -25,7 +25,13 @@ public class FreightTrain
     // 5 gizmos and not in repair.
     public FreightTrain(int n)
     {
-        /* missing code */
+        if(n >0)	{
+        	for(int i =0; i<n;i++) {
+        		train.add(new Boxcar());
+        	}
+        }
+        else
+        	train.add(new Boxcar());
     }
     
     // This method returns a String representation of the
@@ -44,22 +50,34 @@ public class FreightTrain
     // "in repair"/"in service".
     public String toString()
     {
-        /* missing code (don't forget to update the return statement) */
-        return "";
+       String boxcars= "";
+       for(Boxcar box : train)	{
+    	  boxcars += box.toString()+"\n";
+       }
+        return boxcars;
     }
     
     // This method sets the cargo type of all the boxcars in the entire train.
     public void setCargo(String c)
     {
-        /* missing code */
+       for(Boxcar box : train)
+    	   box.setCargo(c);
     }
     
     // This method sets the boxcars to the pattern "gizmos", "gadgets", "widgets", 
-    // "wadgets", "gizmos", "gadgets", "widgets", "wadgets", ... 
+    // "wadgets", , ... 
     // until the end of the train.
     public void setMultiCargo()
     {
-        /* missing code */
+        String [] cargos = {"gizmos", "gadgets", "widgets", "wadgets"};
+        int pos = 0;
+        for (Boxcar box : train) {
+        	box.setCargo(cargos[pos]);
+        	if(pos <3)
+        		pos++;
+        	else
+        		pos=0;
+        }
     }
     
     // This method fills every boxcar in the train to max capacity of 10. 
@@ -67,13 +85,23 @@ public class FreightTrain
     // repair variable is false.
     public void fillTrain()
     {
-        /* missing code */
+        for(Boxcar box : train) {
+        	boolean repair = false;
+        	int pos =box.toString().indexOf("\t")+1;
+        	if(box.toString().substring(pos).equals("in repair"))
+        		repair = true;
+        	if(!repair) {
+        		while(!box.isFull())
+        			box.loadCargo();
+        	}
+        }
     }
     
     // This method sets the Boxcar at location i’s repair variable to true.
     public void callForRepair(int i)
     {
-        /* missing code */
+        Boxcar box = train.get(i);
+        box.callForRepair();
     }
     
     public static void main(String[] args)
@@ -187,6 +215,7 @@ public class FreightTrain
         // ***********************************
         System.out.println("\n6. Test callForRepair(n)");
         train1.callForRepair(0);
+       // System.out.println(train1);
         if (train1.toString().equals("0 gizmos\tin repair"))
         {
             System.out.println("*** PASS: callForRepair(1) works as expected.");
