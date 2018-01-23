@@ -13,7 +13,10 @@ public class Test extends Shortcuts {
 //		 s.IntArray(10);
 //		 s.FillIntArray();
 //		 Test
-		
+
+		//Test from Intellij
+		System.out.println(mystery(2,5));
+
 		String a = "applepie";
 	    String b = "apple";
 	    System.out.print(b.compareTo(a));
