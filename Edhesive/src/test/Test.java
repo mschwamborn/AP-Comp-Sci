@@ -13,24 +13,18 @@ public class Test extends Shortcuts {
 //		 s.IntArray(10);
 //		 s.FillIntArray();
 //		 Test
-		System.out.println(mystery(2,5));
-		 
 		
-		
-		
-		
-
-		
+		String a = "applepie";
+	    String b = "apple";
+	    System.out.print(b.compareTo(a));
+	    //System.out.print( mystery(18,10));
 	}
-	public static int mystery(int a, int b) {
-	    System.out.println(a + " " + b);
-
-	    if (a > b)
-	        return mystery(a, Math.abs(b) + 1);
-	    else if (b > a)
-	        return mystery(Math.abs(a) + 1, b);
-
-	    return 1;
+	public static int mystery(int x, int y)      
+	{
+	  if (x == 0)
+	    return y;
+	  else
+	    return mystery(y % x, x);
 	}
 	
 }
