@@ -13,6 +13,7 @@ public class Test extends Shortcuts {
 //		 s.IntArray(10);
 //		 s.FillIntArray();
 //		 Test
+		//Test from Intellij
 		System.out.println(mystery(2,5));
 		 
 		
