@@ -948,7 +948,36 @@ public class Classwork {
 	    		System.out.println(array);
 	    		
 	    	}
-	    	
+	    	public static void sortAndPrint(){
+	        	String [] list = { "against" , "forms" , "belief" , "government" , "democratic" , "movement" , "understanding"};
+	            String temp = "";
+	            int min = 100;
+	            int pos = 0;
+	            for(int i=0; i<list.length;i++){
+	                for(int u = i; u<list.length; u++){
+	                    /*if((int)list[0].charAt(0)<min){
+	                        min = (int)list[0].charAt(0);
+	                        pos = u;   
+	                        System.out.println("For1");
+
+	                    }*/
+	                    if(list[i].compareTo(list[u])>0){
+	                    	
+	                        min = (int)list[u].charAt(0);
+	                        System.out.println("min = " +min);
+	                        pos = u;
+	                        System.out.println("pos = "+pos);
+	                        temp = list[u];
+	                        System.out.println("temp = "+temp);
+	                        list[u] =list[i]; 
+	                        list[i] = temp;
+
+	                    }
+	                }
+	            } for(int c = 0; c<list.length; c++)
+	            System.out.print(list[c]+" ");
+	        }
+	        
 
 }
 	    	
