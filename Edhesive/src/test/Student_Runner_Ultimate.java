@@ -10,11 +10,13 @@ public class Student_Runner_Ultimate {
 
         UltimatePlayer player = new UltimatePlayer("Mary", "Smith", "cutter");
         System.out.println("Printing player:\n" + player + "\n");
-/*
+        UltimatePlayer player1 = new UltimatePlayer("Mary", "Smith", "cutter");
+        System.out.println("Printing player:\n" + player1 + "\n");
+
         Captain captain = new Captain("Henry", "Tully", "handler", true);
         System.out.println("Printing captain:\n" + captain + "\n");
 
-        Coach coach = new Coach("Sara", "Lee", "Head coach");
+        /*        Coach coach = new Coach("Sara", "Lee", "Head coach");
         System.out.println("Printing coach:\n" + coach + "\n");
 
         ArrayList<UltimatePlayer> players = new ArrayList<UltimatePlayer>();
