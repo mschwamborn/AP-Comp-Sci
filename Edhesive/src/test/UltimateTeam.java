@@ -12,11 +12,11 @@ public class UltimateTeam {
 		
 	}
 	public String getCutters() {
-		String out = null;
+		String out = "";
 		for(UltimatePlayer p : players) {
 			if(p.getPosition().equals("cutter"))
 			{
-				out = p.toString()+"\n";
+				out += p.toString()+"\n";
 			}
 				
 		}
@@ -25,11 +25,11 @@ public class UltimateTeam {
 		
 	}
 	public String getHandlers() {
-		String out = null;
+		String out = "";
 		for(UltimatePlayer p : players) {
 			if(p.getPosition().equals("handler"))
 			{
-				out = p.toString()+"\n";
+				out += p.toString()+"\n";
 			}
 			
 		}
@@ -46,7 +46,7 @@ public class UltimateTeam {
 			out+=c.toString()+"\n";
 		}
 		
-		out+="PLAYERS\n";
+		out+="\nPLAYERS\n";
 		for(UltimatePlayer p : players)
 		{
 			out+=p.toString()+"\n";
