@@ -24,7 +24,7 @@ public class Lesson_17_Activity {
         	if(b<a[0]||b>a[a.length-1]) {
         		return -1;
             }
-        	System.out.println(i);
+        	System.out.println(i);//Debugging
             if(a[i]<b) {
             	i += ((a.length-i)/2); 
             }
