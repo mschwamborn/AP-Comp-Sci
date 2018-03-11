@@ -1,10 +1,6 @@
 package test;
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.io.File;
-import java.io.IOException;
-import static java.lang.System.*;
+
 
 public class NumberShifter
 {
@@ -12,12 +8,20 @@ public class NumberShifter
 	{
 		int[] array = new int[size];
 		for(int i =0; i<size; i++) {
-			array[i] = (int) (Math.random()*10);
+			array[i] = (int) (Math.random()*10 + 1);
 		}
-		return null;
+		return array;
 	}
 	public static void shiftEm(int[] array)
 	{
-		
+		int temp = 0;
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] == 7) {
+				array[i] = array[temp];
+				array[temp] = 7;
+				temp++;
+			}
+		}
 	}
+	
 }
